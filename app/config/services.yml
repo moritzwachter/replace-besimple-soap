@@ -7,3 +7,23 @@ services:
     fake.container:
         class: AppBundle\FakeContainer\FakeContainer
         arguments: ['@service_container']
+
+    fake.service:
+        class:   AppBundle\FakeContainer\FakeService
+
+    soap.transcoding:
+        class: AppBundle\SOAP\TranscodingSoapHandler
+        arguments:
+            - '@fake.service'
+            - '@logger'
+            - '@fake.service'
+            - '@fake.service'
+
+    soap.livestream:
+        class: AppBundle\SOAP\LivestreamSoapHandler
+        arguments:
+            - '@fake.service'
+            - '@logger'
+            - '@fake.service'
+            - '@fake.service'
+            - '@fake.service'

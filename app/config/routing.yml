@@ -1,3 +1,4 @@
-_besimple_soap:
-    resource: "@BeSimpleSoapBundle/Resources/config/routing/webservicecontroller.xml"
+_soap:
+    resource: "@AppBundle/Controller/SoapController.php"
     prefix:   /wsdl
+    type:     annotation
