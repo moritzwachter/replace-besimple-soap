@@ -13,3 +13,4 @@
 
 .docker/cache
 .idea
+.bash_history
